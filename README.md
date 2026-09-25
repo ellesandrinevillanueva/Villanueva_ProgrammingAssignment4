@@ -8,7 +8,7 @@ This repository contains Programming Assignment 4 for the course Advanced Comput
 3. Summarize the relationship between categorical features and a numerical variable; and
 4. Present data comparisons using labeled plots.
 
-## Part A: Visayas Communication DataFrame
+## A. Visayas Communication DataFrame
 
 ```
 df = pd.read_excel('board2.xlsx')
@@ -59,7 +59,7 @@ As the given DataFrame was missing the Average column, ``.mean(axis=1)`` was use
 *Add Vis filter*
 *Add shape*
 
-## Part B: Visayas Female DataFrame
+## B. Visayas Female DataFrame
 
 A DataFrame named `VisFemale` is created by selecting female students from the Visayas. The selected columns are Name, Track, GEAS, Electronics, and Average.
 
@@ -81,7 +81,7 @@ VisFemale
 | 23 | S24  | Microelectronics |   60 |          45 |   57.75 |
 | 25 | S26  | Instrumentation  |   83 |          47 |   65.75 |
 
-## Part C: Category-Average Visualization
+## C. Category-Average Visualization
 
 The mean of Average for every category was computed with Pandas. ``.groupby()`` ensured that the calculations were organized by the columns Track, Gender, and Hometown.
 ```
@@ -111,11 +111,6 @@ hometown_ave
 | Mindanao     |   66.678571 |
 | Visayas      |   65.750000 |
 
-Three bar charts were displayed, grouped according to Track, Gender, and Hometown averages. The highest for Track had a mean of 67.975 (Communication). In Gender, the highest was 67.183333 (Male). In Hometown, the highest was 68.083333 (Luzon).
-### Part C: Mean Average by Track, Gender, and Hometown
-
-The data was grouped according to **Track, Gender, and Hometown** to calculate the mean of the students' Average scores. The results were then compared using three bar charts.
-
 ```
 import matplotlib.pyplot as plt
 plt.figure(figsize=(30,5))
@@ -139,6 +134,9 @@ plt.xlabel('Hometown')
 plt.ylabel('Average')
 plt.title('Mean by Hometown')
 ```
+Three bar charts were displayed, grouped according to Track, Gender, and Hometown averages. The highest for Track had a mean of 67.975 (Communication). In Gender, the highest was 67.183333 (Male). In Hometown, the highest was 68.083333 (Luzon).
+
+The data was grouped according to **Track, Gender, and Hometown** to calculate the mean of the students' Average scores. The results were then compared using three bar charts.
 
 **README File Version History**
 
