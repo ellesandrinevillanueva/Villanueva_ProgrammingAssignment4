@@ -56,6 +56,7 @@ As the given DataFrame was missing the Average column, ``.mean(axis=1)`` was use
 | 27 | S28  | Male   | Communication    | Visayas  |   85 |          53 |   80 |            53 |   67.75 |
 | 28 | S29  | Male   | Instrumentation  | Mindanao |   73 |          48 |   71 |            62 |   63.50 |
 | 29 | S30  | Male   | Instrumentation  | Luzon    |   78 |          81 |   57 |            56 |   68.00 |
+*Add Vis filter*
 
 ## Part B: Visayas Female DataFrame
 
