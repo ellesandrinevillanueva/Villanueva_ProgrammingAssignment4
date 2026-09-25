@@ -10,14 +10,8 @@ This repository contains Programming Assignment 4 for the course Advanced Comput
 
 ## Part A: Visayas Communication DataFrame
 
-A DataFrame named `VisComm` is created by selecting students who:
-
-* Are from the Visayas
-* Are under the Communication track
-
-The selected columns are Name, Gender, Math, Electronics, and Average.
-
-The resulting DataFrame contains **5 rows and 5 columns**.
+A DataFrame named `VisComm` was created containing students whose Hometown is Visayas and whose Track is Communication with the retained columns of Name, Gender, Math, Electronics, and Average.
+The DataFrame was displayed along with the `.shape` of the table.
 
 ## Part B: Visayas Female DataFrame
 
