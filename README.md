@@ -46,6 +46,14 @@ The DataFrame was displayed along with the `.shape` of the table, which is (5, 5
 | 28 | S29  | Male   | Instrumentation  | Mindanao |   73 |          48 |   71 |            62 |
 | 29 | S30  | Male   | Instrumentation  | Luzon    |   78 |          81 |   57 |            56 |
 
+```
+df = df.copy()
+df['Average'] = df[['Math','Electronics','GEAS','Communication']].mean(axis=1)
+
+df
+```
+As the given DataFrame was missing the Average column, ``.mean(axis=1)`` was used to calculate the mean of each row.
+
 ## Part B: Visayas Female DataFrame
 
 A DataFrame named `VisFemale` is created by selecting female students from the Visayas. The selected columns are Name, Track, GEAS, Electronics, and Average.
