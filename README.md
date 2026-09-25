@@ -83,29 +83,17 @@ VisFemale
 
 ## Part C: Category-Average Visualization
 
-The mean Average is calculated for three categories:
-
-* **Track**
-* **Gender**
-* **Hometown**
-
-The results are then visualized using bar charts.
-
-The calculated category means are:
-
-| Category | Group            | Mean Average |
-| -------- | ---------------- | -----------: |
-| Track    | Communication    |       67.975 |
-| Track    | Instrumentation  |       65.225 |
-| Track    | Microelectronics |       67.500 |
-| Gender   | Female           |       66.617 |
-| Gender   | Male             |       67.183 |
-| Hometown | Luzon            |       68.083 |
-| Hometown | Mindanao         |       66.679 |
-| Hometown | Visayas          |       65.750 |
-
-The notebook identifies the highest sample mean within each grouping as Communication for Track, Male for Gender, and Luzon for Hometown.
-
+a. For each feature, compute the mean of Average for every category using Pandas.
+The mean of Average for every category was computed with Pandas. ``.groupby()`` ensured that the calculations were organized by the columns Track, Gender, and Hometown.
+```
+track_ave = df.groupby('Track')[['Average']].mean()
+track_ave
+```
+| **Track**        | **Average** |
+| ---------------- | ----------: |
+| Communication    |      67.975 |
+| Instrumentation  |      65.225 |
+| Microelectronics |      67.500 |
 
 **README File Version History**
 
