@@ -83,7 +83,6 @@ VisFemale
 
 ## Part C: Category-Average Visualization
 
-a. For each feature, compute the mean of Average for every category using Pandas.
 The mean of Average for every category was computed with Pandas. ``.groupby()`` ensured that the calculations were organized by the columns Track, Gender, and Hometown.
 ```
 track_ave = df.groupby('Track')[['Average']].mean()
@@ -112,10 +111,37 @@ hometown_ave
 | Mindanao     |   66.678571 |
 | Visayas      |   65.750000 |
 
+Three bar charts were displayed, grouped according to Track, Gender, and Hometown averages. The highest for Track had a mean of 67.975 (Communication). In Gender, the highest was 67.183333 (Male). In Hometown, the highest was 68.083333 (Luzon).
+### Part C: Mean Average by Track, Gender, and Hometown
+
+The data was grouped according to **Track, Gender, and Hometown** to calculate the mean of the students' Average scores. The results were then compared using three bar charts.
+
+```
+import matplotlib.pyplot as plt
+plt.figure(figsize=(30,5))
+plt.subplot(1, 3, 1)
+plt.bar(track_ave.index, track_ave['Average'], color = 'maroon')
+plt.xlabel('Track')
+plt.ylabel('Average')
+plt.title('Mean by Track')
+
+plt.figure(figsize=(30,5))
+plt.subplot(1, 3, 1)
+plt.bar(gender_ave.index, gender_ave['Average'], color = 'lightblue')
+plt.xlabel('Gender')
+plt.ylabel('Average')
+plt.title('Mean by Gender')
+
+plt.figure(figsize=(30,5))
+plt.subplot(1, 3, 1)
+plt.bar(hometown_ave.index, hometown_ave['Average'], color = 'indigo')
+plt.xlabel('Hometown')
+plt.ylabel('Average')
+plt.title('Mean by Hometown')
+```
+
 **README File Version History**
 
 September 17, 2026 - Initial submission
 
 September 26, 2026 - Edited README file
-
-August 28, 2026 - Added description
