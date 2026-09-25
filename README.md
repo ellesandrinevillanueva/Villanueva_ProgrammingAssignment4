@@ -94,6 +94,23 @@ track_ave
 | Communication    |      67.975 |
 | Instrumentation  |      65.225 |
 | Microelectronics |      67.500 |
+```
+gender_ave = df.groupby('Gender')[['Average']].mean()
+gender_ave
+```
+| **Gender** | **Average** |
+| ---------- | ----------: |
+| Female     |   66.616667 |
+| Male       |   67.183333 |
+```
+hometown_ave = df.groupby('Hometown')[['Average']].mean()
+hometown_ave
+```
+| **Hometown** | **Average** |
+| ------------ | ----------: |
+| Luzon        |   68.083333 |
+| Mindanao     |   66.678571 |
+| Visayas      |   65.750000 |
 
 **README File Version History**
 
