@@ -57,12 +57,29 @@ As the given DataFrame was missing the Average column, ``.mean(axis=1)`` was use
 | 28 | S29  | Male   | Instrumentation  | Mindanao |   73 |          48 |   71 |            62 |   63.50 |
 | 29 | S30  | Male   | Instrumentation  | Luzon    |   78 |          81 |   57 |            56 |   68.00 |
 *Add Vis filter*
+*Add shape*
 
 ## Part B: Visayas Female DataFrame
 
 A DataFrame named `VisFemale` is created by selecting female students from the Visayas. The selected columns are Name, Track, GEAS, Electronics, and Average.
 
 The data is then filtered to show students whose Average is at least 60.
+```
+VisFemale = df.loc[(df['Hometown'] == 'Visayas') &
+            (df['Gender'] == 'Female'),
+            ['Name','Track','GEAS','Electronics','Average']]
+VisFemale[VisFemale['Average'] >= 60]
+VisFemale
+```
+`VisFemale` shows female students from Visayas, with the columns Name, Track, GEAS, Electronics, and Average. This also filters to show whose averages are at least 60. The resulting table is:
+|  # | Name | Track            | GEAS | Electronics | Average |
+| -: | ---- | ---------------- | ---: | ----------: | ------: |
+|  5 | S6   | Microelectronics |   86 |          45 |   75.50 |
+| 10 | S11  | Communication    |   48 |          56 |   54.75 |
+| 20 | S21  | Microelectronics |   68 |          51 |   68.50 |
+| 21 | S22  | Communication    |   89 |          39 |   62.50 |
+| 23 | S24  | Microelectronics |   60 |          45 |   57.75 |
+| 25 | S26  | Instrumentation  |   83 |          47 |   65.75 |
 
 ## Part C: Category-Average Visualization
 
